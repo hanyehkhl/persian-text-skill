@@ -1,0 +1,15 @@
+[project]
+name = "persian-text-skill"
+version = "1.0.0"
+description = "Agent Skill (agentskills.io) for Persian text cleanup, digits, and Jalali dates"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["skills/persian-text-skill/scripts"]
+testpaths = ["tests"]
