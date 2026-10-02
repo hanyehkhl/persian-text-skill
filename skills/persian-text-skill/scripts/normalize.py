@@ -20,7 +20,6 @@ from __future__ import annotations
 import argparse
 import re
 import sys
-from pathlib import Path
 
 from digits import to_english, to_persian
 
@@ -177,7 +176,9 @@ def main(argv: list[str] | None = None) -> int:
     )
 
     if args.in_place:
-        Path(args.file).write_text(result, encoding="utf-8", newline="")
+        # Path.write_text(newline=...) needs Python 3.10+, so use open() for 3.9.
+        with open(args.file, "w", encoding="utf-8", newline="") as handle:
+            handle.write(result)
     else:
         sys.stdout.write(result)
     return 0
