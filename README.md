@@ -22,7 +22,7 @@ Python 3.9+ and the standard library only. No network access, no dependencies.
 **Hermes Agent**
 
 ```bash
-hermes skills tap add <your-username>/persian-text-skill
+hermes skills tap add hanyehkhl/persian-text-skill
 ```
 
 **Claude Code and other agentskills.io-compatible agents**: copy the skill
